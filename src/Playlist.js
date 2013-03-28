@@ -15,7 +15,7 @@ var Playlist = Songs.extend({
       // if (this.length===0) {
         // this.at(0).play();
       // }
-    })
+    });
   }
 
 });

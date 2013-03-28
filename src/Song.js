@@ -17,6 +17,5 @@ var Song = Backbone.Model.extend({
   }
   // add removefrom playlist
   // removeFromPlaylist: function() {
-    
   // }
 });

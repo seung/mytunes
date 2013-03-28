@@ -10,7 +10,7 @@ var App = Backbone.Model.extend({
       this.set('currentSong', song);
     }, this);
 
-    params.library.on('addToPlayList', function(song) {
+    params.library.on('addToPlaylist', function(song) {
       this.get('playlist').add(song); // get or set?
     },this);
   }
