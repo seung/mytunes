@@ -9,10 +9,15 @@ var AppView = Backbone.View.extend({
   },
 
   render: function(){
-    return this.$el.html([
+    var result = this.$el.html([
       this.playerView.$el,
-      new LibraryView({collection: this.model.get('library')}).render()
-    ]);
+      new LibraryView({collection: this.model.get('library')}).render(),
+      new PlaylistView({collection: this.model.get('playlist')}).render()
+    ]);  
+    return result;
   }
-
 });
+
+        // index.html 
+        // -> var myAppView = new AppView({model: myApp});
+        // -> $('body').append(myAppView.render());

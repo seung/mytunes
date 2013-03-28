@@ -15,6 +15,8 @@
     <script src="src/App.js"></script>
 
     <script src="src/PlayerView.js"></script>
+    <script src="src/PlaylistView.js"></script>
+    <script src="src/PlaylistEntryView.js"></script>
     <script src="src/LibraryView.js"></script>
     <script src="src/LibraryEntryView.js"></script>
     <script src="src/AppView.js"></script>
@@ -22,15 +24,29 @@
     <script>
       $(function(){
         // set up model objects
-        var library = new Songs(songData);
-        var app = new App({library: library});
+        var myLibrary = new Songs(songData);
+            // songData = [
+              // {
+              //   url: "mp3s/08 4 Page Letter.mp3",
+              //   title: "4 Page Letter",
+              //   artist: "Aaliyah"
+              // }, ...
+        var myPlaylist = new Playlist();
+        var myApp = new App({library: myLibrary});
+        //myApp.set('playlist', new Playlist());
+        // var myPlaylist = new Songs(songData);
 
         // build a view for the top level of the whole app
-        var appView = new AppView({model: app});
+        var myAppView = new AppView({model: myApp});
 
         // put the view onto the screen
-        $('body').append(appView.render());
+        $('body').append(myAppView.render());
       });
     </script>
   </body>
 </html>
+
+
+
+
+
