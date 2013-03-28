@@ -8,13 +8,14 @@ var PlaylistEntryView = Backbone.View.extend({
     'click': function() {
       this.model.dequeue();
     },
-    
+
     'addToPlaylist': function() {
       this.model.render();
     }
   },
 
   initialize: function() {
+    this.render();
     // 'click': function() {
     //   this.model.dequeue();
     // }
