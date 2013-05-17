@@ -30,5 +30,4 @@ describe('AppView', function() {
       expect(appView.playerView.model).toEqual(song);
     });
   });
-
 });

@@ -23,30 +23,14 @@
 
     <script>
       $(function(){
-        // set up model objects
-        var myLibrary = new Songs(songData);
-            // songData = [
-              // {
-              //   url: "mp3s/08 4 Page Letter.mp3",
-              //   title: "4 Page Letter",
-              //   artist: "Aaliyah"
-              // }, ...
-        var myPlaylist = new Playlist();
-        var myApp = new App({library: myLibrary});
-        //myApp.set('playlist', new Playlist());
-        // var myPlaylist = new Songs(songData);
 
-        // build a view for the top level of the whole app
+        var myLibrary = new Songs(songData);
+        var myApp = new App({library: myLibrary});
         var myAppView = new AppView({model: myApp});
 
-        // put the view onto the screen
         $('body').append(myAppView.render());
+        
       });
     </script>
   </body>
 </html>
-
-
-
-
-

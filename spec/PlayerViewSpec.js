@@ -37,5 +37,4 @@ describe('PlayerView', function() {
       expect(appView.playerView.model).not.toEqual(originalSong);
     });
   });
-
 });

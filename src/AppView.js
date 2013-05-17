@@ -17,7 +17,3 @@ var AppView = Backbone.View.extend({
     return result;
   }
 });
-
-        // index.html 
-        // -> var myAppView = new AppView({model: myApp});
-        // -> $('body').append(myAppView.render());

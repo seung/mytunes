@@ -16,16 +16,9 @@ var PlaylistEntryView = Backbone.View.extend({
 
   initialize: function() {
     this.render();
-    // 'click': function() {
-    //   this.model.dequeue();
-    // }
   },
 
   render: function(){
     return this.$el.html(this.template(this.model.attributes));
   }
-
 });
-
-
-

@@ -15,14 +15,14 @@ describe('Song', function() {
     });
   });
 
-  xdescribe('enqueue', function() {
+  describe('enqueue', function() {
     it('triggers an "enqueue" event', function() {
       this.model.enqueue();
       expect(this.trigSpy).toHaveBeenCalledWith('enqueue', this.model);
     });
   });
 
-  xdescribe('dequeue', function() {
+  describe('dequeue', function() {
     it('triggers a "dequeue" event', function() {
       this.model.dequeue();
       expect(this.trigSpy).toHaveBeenCalledWith('dequeue', this.model);

@@ -13,13 +13,6 @@ var PlayerView = Backbone.View.extend({
     })
   },
 
-  // alternate way
-  // events: {
-  //   'ended': function() {
-  //     this.model.ended();
-  //   }
-  // },
-
   setSong: function(song){
     this.model = song;
     this.render();
@@ -28,11 +21,4 @@ var PlayerView = Backbone.View.extend({
   render: function(){
     return this.$el.attr('src', this.model.get('url'));
   }
-
 });
-
-// $('audio')
-// $('audio').on('ended',alert('hi'))
-
-// many views to one model
-// one-to-many relationship

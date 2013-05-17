@@ -16,14 +16,14 @@ describe('PlaylistView', function() {
     ]);
   });
 
-  xit('creates PlaylistEntryViews for each queued song & renders them', function(){
+  it('creates PlaylistEntryViews for each queued song & renders them', function(){
     spyOn(PlaylistEntryView.prototype, 'render').andCallThrough();
     view = new PlaylistView({collection: fakeSongs});
     view.render();
     expect(PlaylistEntryView.prototype.render).toHaveBeenCalled();
   });
 
-  xit('renders when add or remove event fires from the playlist collection', function(){
+  it('renders when add or remove event fires from the playlist collection', function(){
     spyOn(PlaylistView.prototype, 'render').andCallThrough();
     view = new PlaylistView({collection: fakeSongs});
     view.collection.add({
@@ -34,5 +34,4 @@ describe('PlaylistView', function() {
     view.collection.pop();
     expect(view.render.callCount).toEqual(2);
   });
-
 });
